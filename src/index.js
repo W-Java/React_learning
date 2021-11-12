@@ -30,7 +30,7 @@ class Board extends React.Component {
       squares: Array(9).fill(null)
     };
   }
-  处理子组件squares的点击事件
+  // 处理子组件squares的点击事件
   handleClick(i) {
     const squares = this.state.squares.slice();
     squares[i] = 'X';
