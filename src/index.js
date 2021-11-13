@@ -72,6 +72,7 @@ class Board extends React.Component {
 }
 
 // 渲染了一个棋盘
+
 class Game extends React.Component {
   render() {
     return (
