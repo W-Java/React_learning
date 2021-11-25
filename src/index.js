@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import * as buffer from "buffer";
 
 // Square是一个React组件类，通过接受一些props
 // 被封装好了，可以直接使用，来构建复杂的UI界面
@@ -21,13 +22,23 @@ class Square extends React.Component {
   }
 }
 
+// // 将Square写成一个函数组件类 来替换原来的Square类
+// function Square(props) {
+//     return (
+//         <button className='square' onClick={props.onClick}>
+//             {props.value}
+//         </button>
+//     )
+// }
+
 // 渲染了9个方格
 class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       // 建立一个长度为9的空数组
-      squares: Array(9).fill(null)
+      squares: Array(9).fill(null),
+      xIsnext: true
     };
   }
   // 处理子组件squares的点击事件
